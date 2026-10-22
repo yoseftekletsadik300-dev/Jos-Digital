@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jos Digital Center | Web Development & Digital Solutions</title>
+    
+    <!-- PWA Setup & Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00f5d4">
+    <link rel="apple-touch-icon" href="logo-192.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-text">JOS</span> <span class="logo-sub">DIGITAL CENTER</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-target="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-target="about">About Us</a></li>
+                <li><a href="#services" class="nav-link" data-target="services">Services</a></li>
+                <li><a href="#projects" class="nav-link" data-target="projects">Featured Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-target="contact">Contact Us</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <!-- PWA Install Button (Initially Hidden until ready) -->
+                <button id="installBtn" class="btn-install" style="display: none;"><i class="fa-solid fa-download"></i> Install App</button>
+
+                <!-- Settings Dropdown -->
+                <div class="settings-dropdown">
+                    <button class="settings-btn" id="settingsToggle" title="Settings">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <div class="setting-item">
+                            <span>Dark Mode</span>
+                            <input type="checkbox" id="themeToggle" checked>
+                        </div>
+                        <div class="setting-item">
+                            <span>Language</span>
+                            <select id="langSelect">
+                                <option value="en">English</option>
+                                <option value="am">አማርኛ</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Container for Page Views (One view active at a time) -->
+    <main class="main-container">
+        
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-en="Welcome to Our Digital Center" data-am="ወደ ድርጅታችን እንኳን ደህና መጡ">ወደ ድርጅታችን እንኳን ደህና መጡ</h1>
+                    <p class="hero-subtitle" data-en="We craft high-performance websites, database solutions, Telegram bots, and professional digital branding to grow your business." data-am="ለቢዝነስዎ እጅግ ዘመናዊ የዌብሳይት፣ የዳታቤዝ፣ የቴሌግራም ቦት እና የዲጂታል ማስተዋወቂያ መፍትሄዎችን እንሰጣለን።">ለቢዝነስዎ እጅግ ዘመናዊ የዌብሳይት፣ የዳታቤዝ፣ የቴሌግራም ቦት እና የዲጂታል ማስተዋወቂያ መፍትሄዎችን እንሰጣለን።</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-primary nav-link-btn" data-target="projects">Featured Projects</a>
+                        <a href="#contact" class="btn-secondary nav-link-btn" data-target="contact">Contact Us</a>
+                    </div>
+                </div>
+                <!-- Dashboard / Visual Center Image Box -->
+                <div class="hero-visual">
+                    <div class="dashboard-card">
+                        <div class="dash-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="dash-title">Jos Digital Dashboard</span>
+                        </div>
+                        <div class="dash-body">
+                            <i class="fa-solid fa-laptop-code floating-icon"></i>
+                            <div class="dash-stats">
+                                <div class="stat-box">
+                                    <h3>100%</h3>
+                                    <p>Responsive</p>
+                                </div>
+                                <div class="stat-box">
+                                    <h3>24/7</h3>
+                                    <p>Automation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="page-section">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-container">
+                <div class="about-text">
+                    <h3>Who We Are</h3>
+                    <p>Welcome to <strong>Jos Digital Center</strong>. We are a forward-thinking digital agency specialized in delivering end-to-end web development, robust database management, automated Telegram bot ecosystems, and creative digital designs.</p>
+                    <p>Our mission is to empower businesses and individuals with cutting-edge technology that drives growth and builds strong online presence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="page-section">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fa-solid fa-code service-icon"></i>
+                    <h3>Web Development</h3>
+                    <p>Custom HTML/CSS/JS & WordPress websites built for speed, security, and responsive design.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-database service-icon"></i>
+                    <h3>Database Solutions</h3>
+                    <p>Efficient database design, optimization, and system management using modern SQL tools.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-brands fa-telegram service-icon"></i>
+                    <h3>Telegram Bots & Automation</h3>
+                    <p>Automate your client communications, ordering systems, and channel workflows effortlessly.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-pen-nib service-icon"></i>
+                    <h3>CV & Digital Branding</h3>
+                    <p>Professional resumes, portfolios, and eye-catching graphic design for personal or corporate branding.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="page-section">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Buna Bliss Café Website</h3>
+                    <p>A full responsive website built for a premium local coffee shop featuring online menu & reservation.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"><i class="fa-solid fa-robot"></i></div>
+                    <h3>E-Commerce Telegram Bot</h3>
+                    <p>Automated order receiving and product showcase bot for online retail stores.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"><i class="fa-solid fa-id-card"></i></div>
+                    <h3>Interactive Web Portfolios</h3>
+                    <p>Sleek, modern CV and personal portfolios designed for professionals and students.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="page-section">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-container">
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message Sent Successfully!');">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email / Phone" required>
+                    <textarea rows="5" placeholder="How can Jos Digital Center help you?" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jos Digital Center. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
